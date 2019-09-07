@@ -1,0 +1,80 @@
+<!--category.wscroll-xml-->
+<view class="page-index">
+    <view class="store">
+        <view class="icon">
+            <image src="../../static/images/logo.png" style="width: 120rpx; height: 120rpx; padding:20rpx;"/>
+        </view>
+        <view class="name">费尔工坊</view>
+        <view class="tip">店铺公告：今天开始全国2500家门店支持微信支付哦！</view>
+    </view>
+
+    <view class="banner">
+        <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+        <block wx:for="{{banner}}" wx:key="id">
+            <swiper-item>
+                <!-- <navigator url="{{item.link}}"> -->
+                <image src="{{item.url}}" background-size="cover"></image>
+                <!-- </navigator> -->
+            </swiper-item>
+        </block>
+        </swiper>
+    </view>
+
+    <view class="content">
+        <view class="quan" wx:if="{{coupon.length>0}}">
+            <view class="quan-item" wx:for="{{coupon}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+                <view class="money">{{item.discount}}</view>
+                <view class="condition">满{{item.min}}使用</view>
+                <view class="get-btn" bindtap="getCoupon" data-index="{{item.id}}">领取</view>
+            </view>
+        </view>
+        <view class="commiditys">
+            <view class="recommend">
+                <view class="left-wrap">
+                   <view class="left-item">
+                       <navigator url="../goods/goods?id={{newGoods[0].id}}">
+                            <view class="title">{{newGoods[0].name}}</view>
+                            <view class="price">{{newGoods[0].retailPrice}}</view>
+                            <view class="pic">
+                                <image src="{{newGoods[0].picUrl}}" ></image>
+                            </view>
+                        </navigator>
+                   </view>
+                </view>
+                <view class="right-wrap">
+                    <view class="right-item">
+                        <navigator url="../goods/goods?id={{newGoods[1].id}}">
+                            <view class="price">{{newGoods[1].retailPrice}}</view>
+                            <view class="pic">
+                                <image src="{{newGoods[1].picUrl}}" ></image>
+                            </view>
+                        </navigator>
+                    </view>
+                    <view class="right-item">
+                        <navigator url="../goods/goods?id={{newGoods[2].id}}">
+                            <view class="price">{{newGoods[2].retailPrice}}</view>
+                            <view class="pic">
+                                <image src="{{newGoods[2].picUrl}}" ></image>
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+            <view class="hot">
+                <view class="label">热卖商品</view>
+                <view class="hot-wrap">
+                    <view class="hot-item" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+                        <navigator url="/pages/goods/goods?id={{item.id}}">
+                            <image src="{{item.picUrl}}" ></image>
+                            <view class="title">{{item.name}}</view>
+                            <view class="info">
+                                <view class="price">{{item.retailPrice}}</view>
+                                <view class="count">98</view>
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
