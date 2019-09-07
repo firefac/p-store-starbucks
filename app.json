@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index2/index2",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",
     "pages/hotGoods/hotGoods",
@@ -50,7 +51,7 @@
   "tabBar": {
     "backgroundColor": "#fafafa",
     "borderStyle": "white",
-    "selectedColor": "#AB956D",
+    "selectedColor": "#158447",
     "color": "#666",
     "list": [
       {
@@ -58,6 +59,12 @@
         "iconPath": "static/images/home.png",
         "selectedIconPath": "static/images/home@selected.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/index2/index2",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home@selected.png",
+        "text": "首页2"
       },
       {
         "pagePath": "pages/catalog/catalog",

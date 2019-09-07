@@ -41,6 +41,12 @@
 				},
 				{
 					"id": -1,
+					"name": "首页2",
+					"pathName": "pages/index2/index2",
+					"query": ""
+				},
+				{
+					"id": -1,
 					"name": "专题",
 					"pathName": "pages/topic/topic",
 					"query": ""

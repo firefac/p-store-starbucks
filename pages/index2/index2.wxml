@@ -1,87 +1,52 @@
 <!--category.wscroll-xml-->
 <view class="page-index">
     <view class="banner">
-        <swiper indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{imgUrls}}">
-            <swiper-item>
-            <image src="{{item}}" class="slide-image" width="355" height="150"/>
-            </swiper-item>
-        </block>
+        <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+            <block wx:for="{{banner}}" wx:key="id">
+                <swiper-item>
+                    <image src="{{item.url}}" background-size="cover"></image>
+                </swiper-item>
+            </block>
         </swiper>
     </view>
 
     <view class="content">
-        <view class="quan">
-            <view class="quan-item">
-                <view class="money">10</view>
+       <view class="quan" wx:if="{{coupon.length>0}}">
+            <view class="quan-item" wx:for="{{coupon}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+                <view class="money">{{item.discount}}</view>
                 <view class="text">优惠券</view>
-                <view class="condition">满100使用</view>
-                <view class="get-btn">领取</view>
+                <view class="condition">满{{item.min}}使用</view>
+                <view class="get-btn" bindtap="getCoupon" data-index="{{item.id}}">领取</view>
             </view>
-            <view class="quan-item">
-                <view class="money">20</view>
-                <view class="text">优惠券</view>
-                <view class="condition">满180使用</view>
-                <view class="get-btn">领取</view>
-            </view>
-            <view class="quan-item">
-                <view class="money">30</view>
-                <view class="text">优惠券</view>
-                <view class="condition">满240使用</view>
-                <view class="get-btn">领取</view>
-            </view>
-
-            <view class="quan-item">
-                <view class="money">30</view>
-                <view class="text">优惠券</view>
-                <view class="condition">满240使用</view>
-                <view class="get-btn">领取</view>
-            </view>
-            
         </view>
         <view class="commiditys">
             <view class="recommend">
                 <view class="label">推荐商品</view>
                 <view class="recommend-item">
-                    <view class="pic">
-                        <image src="../../images/image_01.png" ></image>
-                    </view>
-                    <view class="title">昭和无惨绘｜丸尾末广×花轮和一 新英名二十八众句
-世界的理解世界的理解世界的理解世界的理解世界的理解</view>
-                    <view class="info">
-                        <view class="price">35</view>
-                        <view class="count">98</view>
-                    </view>
+                    <navigator url="../goods/goods?id={{newGoods[0].id}}">
+                        <view class="pic">
+                            <image src="{{newGoods[0].picUrl}}" ></image>
+                        </view>
+                        <view class="title">{{newGoods[0].name}}</view>
+                        <view class="info">
+                            <view class="price">{{newGoods[0].retailPrice}}</view>
+                        </view>
+                    </navigator>
                 </view>
             </view>
-            <view class="hot">
+
+           <view class="hot">
                 <view class="label">热卖商品</view>
                 <view class="hot-wrap">
-                    <view class="hot-item">
-                        <view class="pic">
-                            <image src="../../images/image_01.png" ></image>
-                        </view>
-                        <view class="text">
-                            <view class="title">昭和无惨绘｜丸尾末广×花轮和一 新英名二十八</view>
+                    <view class="hot-item" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+                        <navigator url="/pages/goods/goods?id={{item.id}}">
+                            <image src="{{item.picUrl}}" ></image>
+                            <view class="title">{{item.name}}</view>
                             <view class="info">
-                                <view class="price">35</view>
+                                <view class="price">{{item.retailPrice}}</view>
                                 <view class="count">98</view>
                             </view>
-                        </view>                      
-                    </view>
-
-                    <view class="hot-item">
-                        <view class="pic">
-                            <image src="../../images/image_01.png" ></image>
-                        </view>
-                        <view class="text">
-                            <view class="title">昭和无惨绘｜丸尾末广×花轮和一 新英名二十八</view>
-                            <view class="info">
-                                <view class="price">35</view>
-                                <view class="count">98</view>
-                            </view>
-                        </view>                      
+                        </navigator>
                     </view>
                 </view>
             </view>

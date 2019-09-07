@@ -150,40 +150,58 @@
     color: #999999
 }
 
+.content .hot{
+    background-color: #fff;
+    
+}
+.content .hot .label{
+    height: 84rpx;
+    width:100%;
+    line-height: 84rpx;
+    padding: 0 30rpx;
+    font-size: 26rpx;
+    color: #999999
+}
+.hot .label{
+    width: 750rpx;
+    border-bottom: 1rpx #e5e5e5 solid;
+}
 .hot-item{
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
-    padding: 22rpx 30rpx;
-    border-top: 1rpx #e5e5e5 solid;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    padding: 22rpx;
+    border-bottom: 1rpx #e5e5e5 solid;
+    flex: 1;
+    float: left;
 }
 
+.hot-item:nth-child(2n-1){
+    border-right: 1rpx #e5e5e5 solid;
+}
 
 .hot-item .pic{
-    text-align: center;
-    margin-right: 20rpx
+    text-align: center
 }
 .hot-item image{
-    width: 135rpx;
-    height: 135rpx
+    width: 335rpx;
+    height: 335rpx
 }
+
 .hot-item .title{
     height: 72rpx;
     display: flex;
     line-height: 35rpx;
     flex-direction: column;
     justify-content: center;
-    padding: 16rpx 0;
     text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
 }
+
 
 .hot-item  .price{
    color: #e04904;
    padding: 16rpx 0
 }
+
 .hot-item  .price::before{
   content: "¥";
 }

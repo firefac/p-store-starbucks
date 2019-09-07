@@ -10,13 +10,13 @@
 
     <view class="banner">
         <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-        <block wx:for="{{banner}}" wx:key="id">
-            <swiper-item>
-                <!-- <navigator url="{{item.link}}"> -->
-                <image src="{{item.url}}" background-size="cover"></image>
-                <!-- </navigator> -->
-            </swiper-item>
-        </block>
+            <block wx:for="{{banner}}" wx:key="id">
+                <swiper-item>
+                    <!-- <navigator url="{{item.link}}"> -->
+                    <image src="{{item.url}}" background-size="cover"></image>
+                    <!-- </navigator> -->
+                </swiper-item>
+            </block>
         </swiper>
     </view>
 

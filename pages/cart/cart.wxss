@@ -237,6 +237,7 @@ page {
 
 .cart-view .item .price {
   float: left;
+  color: #e04904;
 }
 
 .cart-view .item .open {

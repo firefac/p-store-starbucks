@@ -143,7 +143,7 @@
 .goods-info .retailPrice {
   padding-left: 5%;
   font-size: 30rpx;
-  color: #a78845;
+  color: #e04904;
 }
 
 .goods-info .brand {
@@ -737,7 +737,7 @@
 
 .attr-pop .p {
   font-size: 33rpx;
-  color: #333;
+  color: #e04904;
   height: 33rpx;
   line-height: 33rpx;
   margin-bottom: 10rpx;

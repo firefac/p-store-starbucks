@@ -6,8 +6,8 @@
 // 云平台部署时使用
 // var WxApiRoot = 'http://118.24.0.153:8080/wx/';
 // 云平台上线时使用
-var WxApiRoot = 'https://test-a9er4at0q9zb.firefac.cn/openapi/';
-//var WxApiRoot = 'https://test-api.firefac.cn/openapi/';
+//var WxApiRoot = 'https://test-a9er4at0q9zb.firefac.cn/openapi/';
+var WxApiRoot = 'https://test-api.firefac.cn/openapi/';
 
 module.exports = {
   IndexUrl: WxApiRoot + 'home/index', //首页数据接口
