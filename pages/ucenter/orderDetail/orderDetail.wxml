@@ -1,6 +1,8 @@
+<wxs module="dateUtil" src="../../../utils/timeUtil.wxs"></wxs>
+
 <view class="container">
   <view class="order-info">
-    <view class="item-a">下单时间：{{orderInfo.createTime}}</view>
+    <view class="item-a">下单时间：{{dateUtil.dateFormat(orderInfo.createTime)}}</view>
     <view class="item-b">订单编号：{{orderInfo.orderSn}}</view>
     <view class="item-c">
       <view class="l">实付：

@@ -178,6 +178,7 @@ page {
   border: 2px solid red;
   color: red;
   font-weight: bold;
+  transform: rotate(-20deg);
 }
 
 .cart-view .item .img {
