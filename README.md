@@ -1,4 +1,4 @@
-# 花店样式小程序（费尔工坊小程序开放平台，永久免费）
+# 星巴克风格小程序（费尔工坊小程序开放平台，永久免费）
 
 ### 开放平台介绍
 费尔工坊开放平台，为程序员、创业者、传统业者以及对电商小程序的兴趣爱好者，提供专业的电商社交等行业解决方案。帮助大家能快速搭建、并能自定义创建稳定可信赖的小程序系统。
@@ -21,7 +21,7 @@
 ![image](https://firefac-1259431066.picsh.myqcloud.com/oskt0rlk1v7b0hbpt68ocsqj9x0dnm22.png)
 
 #### 风格2
-![image](https://firefac-1259431066.picsh.myqcloud.com/amg4vm6gd8q1awn00rie338ypz481lv9.png)
+![image](https://firefac-1259431066.picsh.myqcloud.com/r2jssmsd91vhoa00i90tzqpkzxk1kqkh.png)
 
 #### 其他
 ![image](https://firefac-1259431066.picsh.myqcloud.com/w1qsgzp61setahg6o8tur45v9sa093op.png)
